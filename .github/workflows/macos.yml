@@ -1,0 +1,17 @@
+name: Test macOS script
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run script
+        run: sudo bash update_hosts_macos.sh
