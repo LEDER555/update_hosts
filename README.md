@@ -6,11 +6,25 @@ Get access to AI (Claude, ChatGPT, Gemini), Spotify, Notion and etc.
 Taken from [dns.geohide.ru:8443](https://dns.geohide.ru:8443/). 
 
 
-Made for Windows.
+## Fast setup (One-Liner)
+
+Copy the command and paste it into the terminal :
 
 
-Usage:
-1. Donwload update_hosts.bat
-2. Launch as administrator
-3. Wait for 5 seconds
-4. Done
+**Windows** (PowerShell as administrator):
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/LEDER555/update_hosts/refs/heads/main/update_hosts.bat" -OutFile "$env:TEMP\update_hosts.bat"; Start-Process "$env:TEMP\update_hosts.bat" -Verb RunAs
+```
+
+**Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/LEDER555/update_hosts/refs/heads/main/update_hosts_linux.sh | sudo bash
+```
+
+**macOS:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/LEDER555/update_hosts/refs/heads/main/update_hosts_macos.sh | sudo bash
+```
+
+
+
